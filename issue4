@@ -1,0 +1,17 @@
+/Реализуйте функцию void isPalindrome(String str), которая принимает строку и печатает в стандартный поток вывода true, если строка является палиндромом и в противном случае — false
+#include <iostream>
+
+void ispalindrome(std::string s) {
+    for (int i = 0; i < s.length()/2; i++) {
+        if (s[i] != s[s.length() - i - 1])  {
+           std::cout<< false;
+           return; 
+        }
+    }
+    std::cout << true;
+    return;
+}
+
+int main() {
+    ispalindrome("traart");
+}

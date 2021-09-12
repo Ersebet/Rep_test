@@ -1,0 +1,13 @@
+//Реализуйте функцию Object[] reverse(Object[] arr), которая возвращает новый массив, являющийся реверсом переданного (функция должна перевернуть исходный массив)
+
+#include <algorithm>
+#include <iostream>
+
+int main() { 
+    int array[10] = {100, 20, 25, 40, 88, 110, 30, 3, 10, 5};
+    std::reverse(std::begin(array), std::end(array));
+    int size = sizeof(array)/sizeof(int);
+    for (int i = 0; i < size; ++i) { 
+        std::cout << array[i] << " ";
+    }
+}

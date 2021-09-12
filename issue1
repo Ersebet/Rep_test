@@ -1,0 +1,22 @@
+/*Задача 1
+Реализуйте функцию int max(int[] arr), 
+принимающую в качестве аргумента массив целых 
+чисел и возвращающую максимальное значение в переданном массиве
+*/
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+int arr[10] = {100, 20, 25, 40, 88, 110, 30, 3, 10, 5};
+int max = arr[0];
+int size = sizeof(arr)/sizeof(int);
+for (int i = 0; i < size; i++) {
+    if (arr[i] > max) {
+        max = arr[i];
+    }
+}
+cout << max << endl;
+return 0;
+}

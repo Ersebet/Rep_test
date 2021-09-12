@@ -1,0 +1,28 @@
+/*Реализуйте функцию List<Integer> even(int[] arr),
+ принимающую массив целых чисел, и возвращающую 
+ список чётных элементов переданного массива
+ */
+#include <iostream>
+#include <list>
+using namespace std;
+
+std::list<int> even(int arr[], size_t n) {
+std::list<int>list1;
+
+for (int i = 0; i < n; i++) 
+    if (arr[i] % 2 == 0) {
+       list1.push_front (arr[i]);
+    }
+return list1;
+
+  }
+  int main() {
+    std::list<int> ans;
+    int size = 10;
+    int arr[size] = {100, 20, 25, 40, 88, 110, 30, 3, 10, 5};
+ans = even(arr, size);
+
+    for (int n : ans)
+        std::cout << n << "\t";
+    std::cout << std::endl;
+}

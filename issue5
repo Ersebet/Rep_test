@@ -1,0 +1,26 @@
+/Реализуйте функция int fact(int n), возвращающую факториал числа n (n!). В случае, если в функцию передано отрицательное значение n, то необходимо выбросить исключение IllegalArgumentException с сообщением «значение n не должно быть отрицательным»
+#include <iostream>
+using namespace std;
+
+long double fact(int N) {
+    if(N < 0) {
+        cout<<"значение n не должно быть отрицательным";
+        return -1;
+    }
+    if (N == 0) 
+        return 1; 
+    else 
+        return N * fact(N - 1);
+}
+
+int main() {
+    cout<<"Enter the number"<<endl;
+    int x;
+    cin>>x;
+    long double answer = fact(x);
+    if (answer < 0) {
+        return 0;
+    }
+    cout<<"Factorial "<<x<<" : "<<answer<<endl;
+    return 0;
+}
